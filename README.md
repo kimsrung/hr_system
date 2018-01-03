@@ -4,6 +4,10 @@
 
 Just a small system for upload and download file between hr and employee.
 
+![image-22](https://user-images.githubusercontent.com/5371371/34517360-45148f08-f0ad-11e7-8028-14cbe2c68e4d.png)
+
+![image-26](https://user-images.githubusercontent.com/5371371/34517363-458cd6fc-f0ad-11e7-9df9-45008ac66d2e.png)
+
 ##Technologies
 
 - Rails 5
