@@ -1,0 +1,20 @@
+<aside class="left-sidebar">
+  <div class="scroll-sidebar">
+    <div class="user-profile">
+      <div class="profile-text font-bold"><%= current_employer.name%> </div>
+    </div>
+    <nav class="sidebar-nav">
+      <ul id="sidebarnav">
+        <li>
+          <%=link_to "Employees", employer_employees_path%>
+        </li>
+        <li>
+          <%=link_to "Documents", employer_documents_path%>
+        </li>
+        <li>
+          <%= link_to 'Sign Out', destroy_employer_session_path, :method => :delete %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>

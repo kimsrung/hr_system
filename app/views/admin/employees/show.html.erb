@@ -1,0 +1,32 @@
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <p id="notice"><%= notice %></p>
+    <div class="row page-titles">
+      <div class="col-md-6 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0"><%= @employee.name %></h3>
+      </div>
+      <div class="col-md-6 col-4 align-self-center">
+        <%= link_to new_admin_employee_path, class: "btn pull-right hidden-sm-down btn-success" do  %>
+          <i class="mdi mdi-plus-circle"></i>
+          <span>New Employee</span>
+        <%end%>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-block">
+        <p>
+          <strong>Description:</strong>
+          <%= @employee.description %>
+        </p>
+
+        <p>
+          <strong>Company:</strong>
+          <%= @employee.company.name %>
+        </p>
+
+        <%= link_to 'Edit', edit_admin_employee_path(@employee), class: "btn btn-primary" %>
+        <%= link_to 'Back', admin_employees_path, class: "btn btn-default" %>
+      </div>
+    </div>
+  </div>
+</div>

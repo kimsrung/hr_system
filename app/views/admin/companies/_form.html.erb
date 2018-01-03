@@ -1,0 +1,6 @@
+<%= simple_form_for [:admin, @company] do |f| %>
+  <%= f.input :name, require: true %>
+  <%= f.input :description %>
+  <%= f.button :submit, class: "btn btn-success" %>
+  <%= link_to 'Back', admin_companies_path, class: "btn btn-default" %>
+<% end %>

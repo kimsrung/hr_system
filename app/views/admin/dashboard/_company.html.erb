@@ -1,0 +1,36 @@
+<div class="row page-titles">
+  <h2>Company <%= company.name%></h2>
+</div>
+<div class="row">
+  <!-- Column -->
+  <div class="col-lg-4 col-md-6">
+      <div class="card">
+          <div class="card-block">
+              <h4 class="card-title">Number of Employers</h4>
+              <div class="text-right">
+                  <h2 class="font-light m-b-0 text-info"><%= company.employers.count%></h2>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+      <div class="card">
+          <div class="card-block">
+              <h4 class="card-title">Number of Employees</h4>
+              <div class="text-right">
+                  <h2 class="font-light m-b-0 text-success"><%= company.employees.count%></h2>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="col-lg-4 col-md-6">
+      <div class="card">
+          <div class="card-block">
+              <h4 class="card-title">Number of Documents</h4>
+              <div class="text-right">
+                  <h2 class="font-light m-b-0 text-purple"><%= company.documents.count%></h2>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

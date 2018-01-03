@@ -1,0 +1,10 @@
+<%= simple_form_for [:admin, @employer] do |f| %>
+  <%= f.input :name, require: true %>
+  <%= f.input :email, require: true %>
+  <%= f.input :password, require: @employer.new_record? %>
+  <%= f.input :password_confirmation, require: @employer.new_record? %>
+  <%= f.association :company %>
+  <%= f.input  :description %>
+  <%= f.button :submit, class: "btn btn-success" %>
+  <%= link_to 'Back', admin_employers_path, class: "btn btn-default" %>
+<% end %>

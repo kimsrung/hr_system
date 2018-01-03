@@ -1,0 +1,10 @@
+<%= simple_form_for [:employee, @document] do |f| %>
+  <%= f.input :name, disabled: true %>
+  <%= f.association :company, disabled: true %>
+  <%= f.association :employer, disabled: true %>
+  <%= f.association :employee, disabled: true %>
+  <%= f.input :submitted_file %>
+  <%= f.input  :description %>
+  <%= f.button :submit, class: "btn btn-success" %>
+  <%= link_to 'Back', employee_documents_path, class: "btn btn-default" %>
+<% end %>

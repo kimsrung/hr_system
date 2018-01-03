@@ -1,0 +1,21 @@
+<tr>
+  <td><%= document.name %></td>
+  <td><%= document.description %></td>
+  <td>
+    <%if document.assigned_file.present?%>
+      <%= document.name %> -
+      <%= link_to 'Download', download_assigned_file_employer_document_path(document) %>
+    <%end%>
+  </td>
+  <td>
+    <%if document.submitted_file.present?%>
+      <%= document.name %> -
+      <%= link_to 'Download', download_submitted_file_employer_document_path(document) %>
+    <%end%>
+  </td>
+  <td><%= document.company.name %></td>
+  <td><%= document.employee.name %></td>
+  <td><%= link_to 'Show', [:employer, document] %></td>
+  <td><%= link_to 'Edit', edit_employer_document_path(document) %></td>
+  <td><%= link_to 'Destroy', [:employer, document], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

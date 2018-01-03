@@ -1,0 +1,20 @@
+<header class="topbar">
+  <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/employee">
+        <b>
+          HR System
+        </b>
+      </a>
+    </div>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav mr-auto mt-md-0 ">
+      </ul>
+      <ul class="navbar-nav my-lg-0">
+        <li class="nav-item dropdown">
+          <%= link_to 'Sign Out', destroy_employee_session_path, :method => :delete, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

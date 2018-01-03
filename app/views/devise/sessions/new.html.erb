@@ -1,0 +1,19 @@
+<div class="login-register" style="background-image: url(<%= image_path('login-register.jpg')%>);">
+  <div class="login-box card">
+    <div class="card-block">
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+        <div class="form-inputs">
+          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :password, required: true %>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Sign in", class: "btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

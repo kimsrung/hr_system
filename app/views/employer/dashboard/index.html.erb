@@ -1,0 +1,53 @@
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <p id="notice"><%= notice %></p>
+    <div class="row page-titles">
+      <div class="col-md-6 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">Welcome <%= current_employer.name%>!</h3>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-block">
+        <div class="table-responsive">
+          <h4 class="card-title">Employees</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render partial: 'employee', collection: @employees %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="card-block">
+        <div class="table-responsive">
+          <h4 class="card-title">Documents</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Assigned File</th>
+                <th>Submitted File</th>
+                <th>Employee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render partial: 'document', collection: @documents %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

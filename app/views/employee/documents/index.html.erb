@@ -1,0 +1,59 @@
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <p id="notice"><%= notice %></p>
+    <div class="row page-titles">
+      <div class="col-md-6 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">Welcome Employee <%= current_employee.name%>!</h3>
+      </div>
+      <div class="col-md-6 col-4 align-self-center">
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-block">
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Assigned File</th>
+                <th>Submitted File</th>
+                <th>Company</th>
+                <th>Employer</th>
+                <th colspan="2"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @documents.each do |document| %>
+                <tr>
+                  <td><%= document.name %></td>
+                  <td><%= document.description %></td>
+                  <td>
+                    <%if document.assigned_file.present?%>
+                      <%= document.name %> -
+                      <%= link_to 'Download', download_assigned_file_employee_document_path(document) %>
+                    <%end%>
+                  </td>
+                  <td>
+                    <%if document.submitted_file.present?%>
+                      <%= document.name %> -
+                      <%= link_to 'Download', download_submitted_file_employee_document_path(document) %>
+                    <%end%>
+                  </td>
+                  <td><%= document.company.name %></td>
+                  <td><%= document.employer.name %></td>
+                  <td><%= link_to 'Show', employee_document_path(document) %></td>
+                  <td><%= link_to 'Edit', edit_employee_document_path(document) %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

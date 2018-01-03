@@ -1,0 +1,47 @@
+<div class="page-wrapper">
+  <div class="container-fluid">
+    <p id="notice"><%= notice %></p>
+    <div class="row page-titles">
+      <div class="col-md-6 col-8 align-self-center">
+        <h3 class="text-themecolor m-b-0 m-t-0">Employers</h3>
+      </div>
+      <div class="col-md-6 col-4 align-self-center">
+        <%= link_to new_admin_employer_path, class: "btn pull-right hidden-sm-down btn-success" do  %>
+          <i class="mdi mdi-plus-circle"></i>
+          <span>New Employer</span>
+        <%end%>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-block">
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Description</th>
+                <th>Company</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @employers.each do |employer| %>
+                <tr>
+                  <td><%= employer.name %></td>
+                  <td><%= employer.email %></td>
+                  <td><%= employer.description %></td>
+                  <td><%= employer.company.name %></td>
+                  <td><%= link_to 'Show', admin_employer_path(employer) %></td>
+                  <td><%= link_to 'Edit', edit_admin_employer_path(employer) %></td>
+                  <td><%= link_to 'Destroy', admin_employer_path(employer), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
