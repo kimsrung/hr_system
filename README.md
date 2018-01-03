@@ -1,4 +1,4 @@
-# Movie App with AngularJs and Rails
+# MHR System with Rails
 
 ##Overview
 
