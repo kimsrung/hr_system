@@ -1,32 +1,50 @@
-# README
+# Movie App with AngularJs and Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Overview
 
-Things you may want to cover:
+Just a small system for upload and download file between hr and employee.
 
-* Ruby version
-  2.3.1
+##Technologies
 
-* System dependencies
-  postgres
-  carrierwave
+- Rails 5
+- HTML5
+- CSS
+- Bootstrap
 
-* Configuration
+##System dependencies
 
-* Database creation
-  rake db:create
-  rake db:migrate
+- postgres
+- carrierwave
+- devise
 
-* Database initialization
-  rake db:seed
+## Bundle and Run the Application
+clone the project
+```
+$ git clone git@github.com:kimsrung/hr_system.git  
+$ cd hr_system
+```
 
-* How to run the test suite
+bundle project
+```
+bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+initialization database
+```
+rake db:create db:migrate db:seed
+```
 
-* Deployment instructions
+Run Project
+```
+rails s
+```
 
-# hr_system
-Just a small system for upload and download file between hr and employee
+run the test
+```
+bundle exec rspec
+```
+
+##Author
+
+Application developed by [Kimsrung Lov](https://www.linkedin.com/in/kimsrung-lov-a8897522?trk=nav_responsive_tab_profile_pic).
 
