@@ -1,4 +1,4 @@
-# MHR System with Rails
+# HR System with Rails
 
 ##Overview
 
